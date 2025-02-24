@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-container {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    padding-top: 100px; /* Move everything closer to the top */
+  }
+  
+  .logo {
+    width: 100px;
+    margin-bottom: 10px; /* Keep distance between logo and title the same */
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 40px; /* Adds a gap below "EchoNotes" */
+  }
+  
+  .subtitle {
+    font-size: 5rem; /* Increased size (2x bigger) */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px; /* Adjust space below */
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #888;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 60px; /* Increased gap before button */
+  }
+  
+  .createnow-btn {
+    font-size: 1.5rem !important; /* Bigger text */
+    padding: 11px 35px !important; /* Larger button */
+    border-radius: 100px !important; /* Makes it rounder */
+    font-weight: bold !important;
+  }
+
+  /* Navbar styling */
+.navbar {
+    background-color: white;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    padding: 15px 20px;
+  }
+  
+  .navbar-scrolled {
+    opacity: 0.9; /* Reduce opacity when scrolling */
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .navbar-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    font-weight: 600; /* Bold for a strong look */
+  }
+  
+  .navbar-nav .nav-link {
+    color: black !important;
+    font-size: 1rem;
+    margin-right: 15px;
+    font-weight: 600; /* Bold for a strong look */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #555 !important;
+  }
+  
+  .dropdown-menu {
+    background-color: white;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-item {
+    color: black !important;
+    font-weight: 500;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Logout button styling */
+  .dropdown-item.text-danger:hover {
+    background-color: #f8d7da;
+  }
+  
+  .page-content {
+    padding-top: 140px; /* Adjust based on your navbar height */
+  }
+  
+  .card {
+    border-radius: 10px;
+    background: #fff;
+    padding: 15px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    color: #555;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Limit to 6 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .upload-card {
+    max-width: 500px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .result-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+  }
+  
+  .form-select, .form-control {
+    border-radius: 8px;
+  }
+  
+  .btn-primary {
+    background: #000000;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .btn-primary:hover {
+    background: #191911;
+  }
+
+  .spinner-border {
+    width: 1rem;
+    height: 1rem;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 0.6s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .summary-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Limit to 6 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Switch Container */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+  }
+  
+  /* Hide Default Checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Slider Styling */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  /* Circle Knob */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  /* Active State */
+  input:checked + .slider {
+    background-color: #4caf50;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(18px);
+  }
+  
+  /* Round Slider */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+/* Global Auth Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  /* Login and Register Card Styling */
+  .login-card,
+  .register-card {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+/* Google Sign-In Button */
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #444;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .google-btn:hover {
+    background-color: #f7f7f7;
+    border-color: #ccc;
+  }
+  
+  .google-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+
+/* Steps Section */
+.steps-section {
+  background-color: #f8f9fa;
+  padding: 4rem 2rem;
+  margin-top: 3rem;
+  width: 100vw;
+}
+
+/* Light Section for Create Audiobook */
+.light-card {
+  background-color: #fcfcfc; /* Slightly lighter than white */
+}
+
+/* Features Section */
+.features-section {
+  background-color: white;
+  padding: 4rem 2rem;
+}
+
+/* Guide Cards */
+.guide-card {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  background: white;
+}
+
+.reverse-card {
+  flex-direction: row-reverse;
+}
+
+/* NEW FIX: Flip text and image */
+.flip-card {
+  flex-direction: row-reverse !important;
+}
+
+.card-image {
+  flex: 1;
+  max-width: 450px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.card-content {
+  flex: 1;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: #2d3748;
+}
+
+.card-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .guide-card {
+    flex-direction: column !important;
+    padding: 1.5rem;
+  }
+  
+  .card-image {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .reverse-card {
+    flex-direction: column !important;
+  }
+
+  .flip-card {
+    flex-direction: column !important;
+  }
+
+  .card-content {
+    text-align: center;
+  }
+}
+
+.home-section {
+  position: relative; /* Allows absolute positioning inside */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh; /* Full height */
+  padding: 20px;
+  padding-bottom: 60px; /* Extra space for the ▼ button */
+}
+
+/* Scroll Down Button */
+.scroll-down-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Ensure "Create Now" and "▼" don’t overlap */
+.button-container {
+  margin-bottom: 40px; /* Push up to prevent overlap */
+}
+
+.scroll-down-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+
+.scroll-down-btn:hover {
+  transform: translateY(5px); /* Smooth hover effect */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .home-section {
+    padding-bottom: 80px; /* More space for ▼ button */
+  }
+
+  .button-container {
+    margin-bottom: 50px; /* Push the "Create Now" button up */
+  }
+
+  .scroll-down-container {
+    bottom: 15px; /* Slightly higher on mobile */
+  }
+}
